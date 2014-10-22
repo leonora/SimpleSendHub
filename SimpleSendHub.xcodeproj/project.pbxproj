@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F5E7C4819F715DD00D3C9D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C4719F715DD00D3C9D8 /* Foundation.framework */; };
+		3F5E7C4A19F715DD00D3C9D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C4919F715DD00D3C9D8 /* CoreGraphics.framework */; };
+		3F5E7C4C19F715DD00D3C9D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C4B19F715DD00D3C9D8 /* UIKit.framework */; };
+		3F5E7C5219F715DD00D3C9D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C5019F715DD00D3C9D8 /* InfoPlist.strings */; };
+		3F5E7C5419F715DD00D3C9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C5319F715DD00D3C9D8 /* main.m */; };
+		3F5E7C5819F715DD00D3C9D8 /* HUBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C5719F715DD00D3C9D8 /* HUBAppDelegate.m */; };
+		3F5E7C5A19F715DD00D3C9D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C5919F715DD00D3C9D8 /* Images.xcassets */; };
+		3F5E7C6119F715DD00D3C9D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C6019F715DD00D3C9D8 /* XCTest.framework */; };
+		3F5E7C6219F715DD00D3C9D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C4719F715DD00D3C9D8 /* Foundation.framework */; };
+		3F5E7C6319F715DD00D3C9D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5E7C4B19F715DD00D3C9D8 /* UIKit.framework */; };
+		3F5E7C6B19F715DD00D3C9D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C6919F715DD00D3C9D8 /* InfoPlist.strings */; };
+		3F5E7C6D19F715DD00D3C9D8 /* SimpleSendHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C6C19F715DD00D3C9D8 /* SimpleSendHubTests.m */; };
+		3F5E7C7719F71D7200D3C9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7619F71D7200D3C9D8 /* Main.storyboard */; };
+		3F5E7C7A19F726ED00D3C9D8 /* HUBContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */; };
+		3F5E7C7D19F7292500D3C9D8 /* HUBContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */; };
+		3F5E7C8019F729EF00D3C9D8 /* HUBContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7F19F729EF00D3C9D8 /* HUBContactDetailTableViewController.m */; };
+		3F5E7C9019F7428000D3C9D8 /* HUBCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C8F19F7428000D3C9D8 /* HUBCommunicator.m */; };
+		3F5E7C9319F756E200D3C9D8 /* HUBContactListBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C9219F756E200D3C9D8 /* HUBContactListBuilder.m */; };
+		3F5E7C9619F7587E00D3C9D8 /* HUBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C9519F7587E00D3C9D8 /* HUBContact.m */; };
+		3F5E7C9A19F75A1300D3C9D8 /* HUBContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C9919F75A1300D3C9D8 /* HUBContactsManager.m */; };
+		3F5E7C9D19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C9C19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m */; };
+		3F5E7CA019F7948A00D3C9D8 /* HUBMessageJsonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C9F19F7948A00D3C9D8 /* HUBMessageJsonBuilder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F5E7C6419F715DD00D3C9D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F5E7C3C19F715DD00D3C9D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5E7C4319F715DD00D3C9D8;
+			remoteInfo = SimpleSendHub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F5E7C4419F715DD00D3C9D8 /* SimpleSendHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSendHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5E7C4719F715DD00D3C9D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F5E7C4919F715DD00D3C9D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3F5E7C4B19F715DD00D3C9D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F5E7C4F19F715DD00D3C9D8 /* SimpleSendHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSendHub-Info.plist"; sourceTree = "<group>"; };
+		3F5E7C5119F715DD00D3C9D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F5E7C5319F715DD00D3C9D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F5E7C5519F715DD00D3C9D8 /* SimpleSendHub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSendHub-Prefix.pch"; sourceTree = "<group>"; };
+		3F5E7C5619F715DD00D3C9D8 /* HUBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUBAppDelegate.h; sourceTree = "<group>"; };
+		3F5E7C5719F715DD00D3C9D8 /* HUBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUBAppDelegate.m; sourceTree = "<group>"; };
+		3F5E7C5919F715DD00D3C9D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3F5E7C5F19F715DD00D3C9D8 /* SimpleSendHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSendHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5E7C6019F715DD00D3C9D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3F5E7C6819F715DD00D3C9D8 /* SimpleSendHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSendHubTests-Info.plist"; sourceTree = "<group>"; };
+		3F5E7C6A19F715DD00D3C9D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F5E7C6C19F715DD00D3C9D8 /* SimpleSendHubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSendHubTests.m; sourceTree = "<group>"; };
+		3F5E7C7619F71D7200D3C9D8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F5E7C7819F726ED00D3C9D8 /* HUBContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactItem.h; sourceTree = "<group>"; };
+		3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactItem.m; sourceTree = "<group>"; };
+		3F5E7C7B19F7292500D3C9D8 /* HUBContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactListTableViewController.h; sourceTree = "<group>"; };
+		3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactListTableViewController.m; sourceTree = "<group>"; };
+		3F5E7C7E19F729EF00D3C9D8 /* HUBContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactDetailTableViewController.h; sourceTree = "<group>"; };
+		3F5E7C7F19F729EF00D3C9D8 /* HUBContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactDetailTableViewController.m; sourceTree = "<group>"; };
+		3F5E7C8A19F741CA00D3C9D8 /* HUBCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBCommunicatorDelegate.h; sourceTree = "<group>"; };
+		3F5E7C8E19F7428000D3C9D8 /* HUBCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBCommunicator.h; sourceTree = "<group>"; };
+		3F5E7C8F19F7428000D3C9D8 /* HUBCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBCommunicator.m; sourceTree = "<group>"; };
+		3F5E7C9119F756E200D3C9D8 /* HUBContactListBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactListBuilder.h; sourceTree = "<group>"; };
+		3F5E7C9219F756E200D3C9D8 /* HUBContactListBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactListBuilder.m; sourceTree = "<group>"; };
+		3F5E7C9419F7587E00D3C9D8 /* HUBContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContact.h; sourceTree = "<group>"; };
+		3F5E7C9519F7587E00D3C9D8 /* HUBContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContact.m; sourceTree = "<group>"; };
+		3F5E7C9719F7599A00D3C9D8 /* HUBContactsManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactsManagerDelegate.h; sourceTree = "<group>"; };
+		3F5E7C9819F75A1300D3C9D8 /* HUBContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactsManager.h; sourceTree = "<group>"; };
+		3F5E7C9919F75A1300D3C9D8 /* HUBContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactsManager.m; sourceTree = "<group>"; };
+		3F5E7C9B19F77C6C00D3C9D8 /* HUBComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBComposeMessageViewController.h; sourceTree = "<group>"; };
+		3F5E7C9C19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBComposeMessageViewController.m; sourceTree = "<group>"; };
+		3F5E7C9E19F7948A00D3C9D8 /* HUBMessageJsonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBMessageJsonBuilder.h; sourceTree = "<group>"; };
+		3F5E7C9F19F7948A00D3C9D8 /* HUBMessageJsonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBMessageJsonBuilder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F5E7C4119F715DD00D3C9D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C4A19F715DD00D3C9D8 /* CoreGraphics.framework in Frameworks */,
+				3F5E7C4C19F715DD00D3C9D8 /* UIKit.framework in Frameworks */,
+				3F5E7C4819F715DD00D3C9D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5E7C5C19F715DD00D3C9D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C6119F715DD00D3C9D8 /* XCTest.framework in Frameworks */,
+				3F5E7C6319F715DD00D3C9D8 /* UIKit.framework in Frameworks */,
+				3F5E7C6219F715DD00D3C9D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F5E7C3B19F715DD00D3C9D8 = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C4D19F715DD00D3C9D8 /* SimpleSendHub */,
+				3F5E7C6619F715DD00D3C9D8 /* SimpleSendHubTests */,
+				3F5E7C4619F715DD00D3C9D8 /* Frameworks */,
+				3F5E7C4519F715DD00D3C9D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F5E7C4519F715DD00D3C9D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C4419F715DD00D3C9D8 /* SimpleSendHub.app */,
+				3F5E7C5F19F715DD00D3C9D8 /* SimpleSendHubTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F5E7C4619F715DD00D3C9D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C4719F715DD00D3C9D8 /* Foundation.framework */,
+				3F5E7C4919F715DD00D3C9D8 /* CoreGraphics.framework */,
+				3F5E7C4B19F715DD00D3C9D8 /* UIKit.framework */,
+				3F5E7C6019F715DD00D3C9D8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F5E7C4D19F715DD00D3C9D8 /* SimpleSendHub */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C5619F715DD00D3C9D8 /* HUBAppDelegate.h */,
+				3F5E7C5719F715DD00D3C9D8 /* HUBAppDelegate.m */,
+				3F5E7C7619F71D7200D3C9D8 /* Main.storyboard */,
+				3F5E7C7E19F729EF00D3C9D8 /* HUBContactDetailTableViewController.h */,
+				3F5E7C7F19F729EF00D3C9D8 /* HUBContactDetailTableViewController.m */,
+				3F5E7C9B19F77C6C00D3C9D8 /* HUBComposeMessageViewController.h */,
+				3F5E7C9C19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m */,
+				3F5E7C7B19F7292500D3C9D8 /* HUBContactListTableViewController.h */,
+				3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */,
+				3F5E7C7819F726ED00D3C9D8 /* HUBContactItem.h */,
+				3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */,
+				3F5E7C5919F715DD00D3C9D8 /* Images.xcassets */,
+				3F5E7C4E19F715DD00D3C9D8 /* Supporting Files */,
+				3F5E7C8A19F741CA00D3C9D8 /* HUBCommunicatorDelegate.h */,
+				3F5E7C8E19F7428000D3C9D8 /* HUBCommunicator.h */,
+				3F5E7C8F19F7428000D3C9D8 /* HUBCommunicator.m */,
+				3F5E7C9119F756E200D3C9D8 /* HUBContactListBuilder.h */,
+				3F5E7C9E19F7948A00D3C9D8 /* HUBMessageJsonBuilder.h */,
+				3F5E7C9F19F7948A00D3C9D8 /* HUBMessageJsonBuilder.m */,
+				3F5E7C9219F756E200D3C9D8 /* HUBContactListBuilder.m */,
+				3F5E7C9719F7599A00D3C9D8 /* HUBContactsManagerDelegate.h */,
+				3F5E7C9819F75A1300D3C9D8 /* HUBContactsManager.h */,
+				3F5E7C9919F75A1300D3C9D8 /* HUBContactsManager.m */,
+				3F5E7C9419F7587E00D3C9D8 /* HUBContact.h */,
+				3F5E7C9519F7587E00D3C9D8 /* HUBContact.m */,
+			);
+			path = SimpleSendHub;
+			sourceTree = "<group>";
+		};
+		3F5E7C4E19F715DD00D3C9D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C4F19F715DD00D3C9D8 /* SimpleSendHub-Info.plist */,
+				3F5E7C5019F715DD00D3C9D8 /* InfoPlist.strings */,
+				3F5E7C5319F715DD00D3C9D8 /* main.m */,
+				3F5E7C5519F715DD00D3C9D8 /* SimpleSendHub-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F5E7C6619F715DD00D3C9D8 /* SimpleSendHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C6C19F715DD00D3C9D8 /* SimpleSendHubTests.m */,
+				3F5E7C6719F715DD00D3C9D8 /* Supporting Files */,
+			);
+			path = SimpleSendHubTests;
+			sourceTree = "<group>";
+		};
+		3F5E7C6719F715DD00D3C9D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E7C6819F715DD00D3C9D8 /* SimpleSendHubTests-Info.plist */,
+				3F5E7C6919F715DD00D3C9D8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F5E7C4319F715DD00D3C9D8 /* SimpleSendHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5E7C7019F715DD00D3C9D8 /* Build configuration list for PBXNativeTarget "SimpleSendHub" */;
+			buildPhases = (
+				3F5E7C4019F715DD00D3C9D8 /* Sources */,
+				3F5E7C4119F715DD00D3C9D8 /* Frameworks */,
+				3F5E7C4219F715DD00D3C9D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSendHub;
+			productName = SimpleSendHub;
+			productReference = 3F5E7C4419F715DD00D3C9D8 /* SimpleSendHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F5E7C5E19F715DD00D3C9D8 /* SimpleSendHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5E7C7319F715DD00D3C9D8 /* Build configuration list for PBXNativeTarget "SimpleSendHubTests" */;
+			buildPhases = (
+				3F5E7C5B19F715DD00D3C9D8 /* Sources */,
+				3F5E7C5C19F715DD00D3C9D8 /* Frameworks */,
+				3F5E7C5D19F715DD00D3C9D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5E7C6519F715DD00D3C9D8 /* PBXTargetDependency */,
+			);
+			name = SimpleSendHubTests;
+			productName = SimpleSendHubTests;
+			productReference = 3F5E7C5F19F715DD00D3C9D8 /* SimpleSendHubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F5E7C3C19F715DD00D3C9D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HUB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Xianjing Hu";
+				TargetAttributes = {
+					3F5E7C5E19F715DD00D3C9D8 = {
+						TestTargetID = 3F5E7C4319F715DD00D3C9D8;
+					};
+				};
+			};
+			buildConfigurationList = 3F5E7C3F19F715DD00D3C9D8 /* Build configuration list for PBXProject "SimpleSendHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F5E7C3B19F715DD00D3C9D8;
+			productRefGroup = 3F5E7C4519F715DD00D3C9D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F5E7C4319F715DD00D3C9D8 /* SimpleSendHub */,
+				3F5E7C5E19F715DD00D3C9D8 /* SimpleSendHubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F5E7C4219F715DD00D3C9D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C7719F71D7200D3C9D8 /* Main.storyboard in Resources */,
+				3F5E7C5219F715DD00D3C9D8 /* InfoPlist.strings in Resources */,
+				3F5E7C5A19F715DD00D3C9D8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5E7C5D19F715DD00D3C9D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C6B19F715DD00D3C9D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F5E7C4019F715DD00D3C9D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C7D19F7292500D3C9D8 /* HUBContactListTableViewController.m in Sources */,
+				3F5E7C9319F756E200D3C9D8 /* HUBContactListBuilder.m in Sources */,
+				3F5E7C9619F7587E00D3C9D8 /* HUBContact.m in Sources */,
+				3F5E7C9A19F75A1300D3C9D8 /* HUBContactsManager.m in Sources */,
+				3F5E7C5819F715DD00D3C9D8 /* HUBAppDelegate.m in Sources */,
+				3F5E7C5419F715DD00D3C9D8 /* main.m in Sources */,
+				3F5E7CA019F7948A00D3C9D8 /* HUBMessageJsonBuilder.m in Sources */,
+				3F5E7C7A19F726ED00D3C9D8 /* HUBContactItem.m in Sources */,
+				3F5E7C8019F729EF00D3C9D8 /* HUBContactDetailTableViewController.m in Sources */,
+				3F5E7C9019F7428000D3C9D8 /* HUBCommunicator.m in Sources */,
+				3F5E7C9D19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5E7C5B19F715DD00D3C9D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5E7C6D19F715DD00D3C9D8 /* SimpleSendHubTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F5E7C6519F715DD00D3C9D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5E7C4319F715DD00D3C9D8 /* SimpleSendHub */;
+			targetProxy = 3F5E7C6419F715DD00D3C9D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F5E7C5019F715DD00D3C9D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5E7C5119F715DD00D3C9D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3F5E7C6919F715DD00D3C9D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5E7C6A19F715DD00D3C9D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F5E7C6E19F715DD00D3C9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F5E7C6F19F715DD00D3C9D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F5E7C7119F715DD00D3C9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSendHub/SimpleSendHub-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSendHub/SimpleSendHub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3F5E7C7219F715DD00D3C9D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSendHub/SimpleSendHub-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSendHub/SimpleSendHub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3F5E7C7419F715DD00D3C9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleSendHub.app/SimpleSendHub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSendHub/SimpleSendHub-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimpleSendHubTests/SimpleSendHubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3F5E7C7519F715DD00D3C9D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleSendHub.app/SimpleSendHub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSendHub/SimpleSendHub-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSendHubTests/SimpleSendHubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F5E7C3F19F715DD00D3C9D8 /* Build configuration list for PBXProject "SimpleSendHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5E7C6E19F715DD00D3C9D8 /* Debug */,
+				3F5E7C6F19F715DD00D3C9D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5E7C7019F715DD00D3C9D8 /* Build configuration list for PBXNativeTarget "SimpleSendHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5E7C7119F715DD00D3C9D8 /* Debug */,
+				3F5E7C7219F715DD00D3C9D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F5E7C7319F715DD00D3C9D8 /* Build configuration list for PBXNativeTarget "SimpleSendHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5E7C7419F715DD00D3C9D8 /* Debug */,
+				3F5E7C7519F715DD00D3C9D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F5E7C3C19F715DD00D3C9D8 /* Project object */;
+}

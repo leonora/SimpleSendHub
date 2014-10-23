@@ -20,7 +20,6 @@
 		3F5E7C6B19F715DD00D3C9D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C6919F715DD00D3C9D8 /* InfoPlist.strings */; };
 		3F5E7C6D19F715DD00D3C9D8 /* SimpleSendHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C6C19F715DD00D3C9D8 /* SimpleSendHubTests.m */; };
 		3F5E7C7719F71D7200D3C9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7619F71D7200D3C9D8 /* Main.storyboard */; };
-		3F5E7C7A19F726ED00D3C9D8 /* HUBContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */; };
 		3F5E7C7D19F7292500D3C9D8 /* HUBContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */; };
 		3F5E7C8019F729EF00D3C9D8 /* HUBContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C7F19F729EF00D3C9D8 /* HUBContactDetailTableViewController.m */; };
 		3F5E7C9019F7428000D3C9D8 /* HUBCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7C8F19F7428000D3C9D8 /* HUBCommunicator.m */; };
@@ -59,8 +58,6 @@
 		3F5E7C6A19F715DD00D3C9D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F5E7C6C19F715DD00D3C9D8 /* SimpleSendHubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSendHubTests.m; sourceTree = "<group>"; };
 		3F5E7C7619F71D7200D3C9D8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3F5E7C7819F726ED00D3C9D8 /* HUBContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactItem.h; sourceTree = "<group>"; };
-		3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactItem.m; sourceTree = "<group>"; };
 		3F5E7C7B19F7292500D3C9D8 /* HUBContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactListTableViewController.h; sourceTree = "<group>"; };
 		3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBContactListTableViewController.m; sourceTree = "<group>"; };
 		3F5E7C7E19F729EF00D3C9D8 /* HUBContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBContactDetailTableViewController.h; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 				3F5E7C9C19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m */,
 				3F5E7C7B19F7292500D3C9D8 /* HUBContactListTableViewController.h */,
 				3F5E7C7C19F7292500D3C9D8 /* HUBContactListTableViewController.m */,
-				3F5E7C7819F726ED00D3C9D8 /* HUBContactItem.h */,
-				3F5E7C7919F726ED00D3C9D8 /* HUBContactItem.m */,
 				3F5E7C5919F715DD00D3C9D8 /* Images.xcassets */,
 				3F5E7C4E19F715DD00D3C9D8 /* Supporting Files */,
 				3F5E7C8A19F741CA00D3C9D8 /* HUBCommunicatorDelegate.h */,
@@ -300,7 +295,6 @@
 				3F5E7C5819F715DD00D3C9D8 /* HUBAppDelegate.m in Sources */,
 				3F5E7C5419F715DD00D3C9D8 /* main.m in Sources */,
 				3F5E7CA019F7948A00D3C9D8 /* HUBMessageJsonBuilder.m in Sources */,
-				3F5E7C7A19F726ED00D3C9D8 /* HUBContactItem.m in Sources */,
 				3F5E7C8019F729EF00D3C9D8 /* HUBContactDetailTableViewController.m in Sources */,
 				3F5E7C9019F7428000D3C9D8 /* HUBCommunicator.m in Sources */,
 				3F5E7C9D19F77C6C00D3C9D8 /* HUBComposeMessageViewController.m in Sources */,
@@ -500,6 +494,7 @@
 				3F5E7C7219F715DD00D3C9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5E7C7319F715DD00D3C9D8 /* Build configuration list for PBXNativeTarget "SimpleSendHubTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +503,7 @@
 				3F5E7C7519F715DD00D3C9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,5 +13,6 @@
 @optional
 - (void)didReceiveContacts:(NSArray *)contacts;
 - (void)fetchingContactsFailedWithError:(NSError *)error;
+- (void)wasSendMessageSuccessful:(BOOL)isSuccessful;
 
 @end

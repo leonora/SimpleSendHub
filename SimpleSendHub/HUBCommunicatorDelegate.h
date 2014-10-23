@@ -12,5 +12,6 @@
 
 - (void)receivedContactsJSON:(NSData *)objectNotation;
 - (void)fetchingContactsFailedWithError:(NSError *)error;
+- (void)receivedSendMessageStatus:(BOOL)isSuccessful;
 
 @end

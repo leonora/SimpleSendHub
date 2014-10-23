@@ -69,6 +69,11 @@
 #pragma mark NSURLConnection Delegate Methods
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     _sendMessageResponseData = [[NSMutableData alloc] init];
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    int code = [httpResponse statusCode];
+    BOOL isSuccessful = false;
+    if (code == 201) isSuccessful = true;
+    [self.delegate receivedSendMessageStatus:isSuccessful];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {

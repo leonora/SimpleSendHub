@@ -37,8 +37,9 @@
     textView.layer.borderWidth = 1.0f;
     textView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    // Do any additional setup after loading the view.
-    
+    spinner.alpha = 0.0f;
+    sendStatusLabel.alpha = 0.0f;
+    [self addDoneToolBarToKeyboard:textView];
 }
 
 - (NSString*)getMessageJson
@@ -54,11 +55,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)pressedSend:(id)sender
 {
+    [self startSending];
     _manager = [[HUBContactsManager alloc] init];
     _manager.communicator = [[HUBCommunicator alloc] init];
     _manager.communicator.delegate = _manager;
@@ -66,15 +67,52 @@
     [_manager sendMessage:[self getMessageJson]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)startSending
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    textView.editable = NO;
+    sendButton.enabled = NO;
+    textView.alpha = 0.3f;
+    sendButton.alpha = 0.3f;
+    spinner.alpha = 1.0f;
+    [spinner startAnimating];
 }
-*/
+
+- (void)stopSending
+{
+    textView.editable = YES;
+    sendButton.enabled = YES;
+    textView.alpha = 1.0f;
+    sendButton.alpha = 1.0f;
+    spinner.alpha = 0.0f;
+    [spinner stopAnimating];
+}
+
+- (void)addDoneToolBarToKeyboard:(UITextView *)aTextView
+{
+    UIToolbar* doneToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    doneToolbar.barStyle = UIBarStyleDefault;
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClickedDismissKeyboard)];
+    doneToolbar.items = [NSArray arrayWithObjects:flexibleSpace, barButton, flexibleSpace, nil];
+    [doneToolbar sizeToFit];
+    aTextView.inputAccessoryView = doneToolbar;
+}
+
+-(void)doneButtonClickedDismissKeyboard
+{
+    [textView resignFirstResponder];
+}
+
+-(void)wasSendMessageSuccessful:(BOOL)isSuccessful
+{
+    [self stopSending];
+    if (isSuccessful) {
+        sendStatusLabel.text = @"Message sent!";
+        sendStatusLabel.alpha = 1.0f;
+    } else {
+        sendStatusLabel.text = @"Send failed.";
+        sendStatusLabel.alpha = 1.0f;
+    }
+}
 
 @end

@@ -29,12 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)setCurrentContact:(HUBContact*)contact
@@ -54,12 +48,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+    if ([_contact.number length] == 0) return 1; // Contact doesn't have a phone number, can't send message
     return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    if ([_contact.number length] == 0) return 2; // Contact doesn't have phone number
     if (section == 0) return 2;
     else return 1;
 }
@@ -78,7 +74,7 @@
         if (indexPath.row == 0) {
             cell.textLabel.text = [NSString stringWithFormat:@"Name: %@", _contact.name];
         } else {
-            cell.textLabel.text = [NSString stringWithFormat:@"Number: %@", _contact.number];
+            cell.textLabel.text = [NSString stringWithFormat:@"Number: %@", [self formatPhone:_contact.number]];
         }
     } else {
         if (cell == nil) {
@@ -91,45 +87,17 @@
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *) formatPhone:(NSString *)phone
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if (phone.length != 12) return phone;
+    NSString *stringWithoutCountryCode = [phone stringByReplacingOccurrencesOfString:@"+1" withString:@""];
+    NSMutableString *prettyPhone = [NSMutableString stringWithString:stringWithoutCountryCode];
+    [prettyPhone insertString:@"(" atIndex:0];
+    [prettyPhone insertString:@")" atIndex:4];
+    [prettyPhone insertString:@"-" atIndex:5];
+    [prettyPhone insertString:@"-" atIndex:9];
+    return [NSString stringWithString:prettyPhone];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 

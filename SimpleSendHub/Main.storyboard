@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="F0F-GP-IAx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Contact List Table View Controller - Contacts-->
@@ -89,14 +90,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-bQ-jVN">
-                                <rect key="frame" x="27" y="91" width="266" height="189"/>
+                                <rect key="frame" x="27" y="100" width="266" height="107"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e0-o6-qWo">
-                                <rect key="frame" x="44" y="308" width="232" height="30"/>
+                                <rect key="frame" x="44" y="220" width="232" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0049489116042408321" green="0.49165675951086951" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send">
@@ -105,29 +106,43 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedSend:" destination="d1j-Go-1nP" eventType="touchUpInside" id="cuU-Uf-nQH"/>
-                                    <segue destination="UZJ-0K-fsl" kind="unwind" unwindAction="unwindToContactList:" id="CG7-TG-zeD"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-Ln-VxH">
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr3-6H-c0f">
+                                <rect key="frame" x="82" y="76" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gxx-bQ-jVN" firstAttribute="top" secondItem="EFs-0F-Msx" secondAttribute="bottom" constant="27" id="0yv-0c-RUC"/>
-                            <constraint firstAttribute="trailing" secondItem="2e0-o6-qWo" secondAttribute="trailing" constant="44" id="4kR-dY-H9U"/>
-                            <constraint firstAttribute="trailing" secondItem="Gxx-bQ-jVN" secondAttribute="trailing" constant="27" id="9JV-nW-J19"/>
-                            <constraint firstItem="2e0-o6-qWo" firstAttribute="top" secondItem="Gxx-bQ-jVN" secondAttribute="bottom" constant="28" id="Lm3-C1-Mbo"/>
-                            <constraint firstItem="IhR-x1-34w" firstAttribute="top" secondItem="Gxx-bQ-jVN" secondAttribute="bottom" constant="288" id="NqM-nn-Zuq"/>
-                            <constraint firstItem="Gxx-bQ-jVN" firstAttribute="leading" secondItem="TrJ-1c-blu" secondAttribute="leading" constant="27" id="WG7-yT-gls"/>
-                            <constraint firstItem="2e0-o6-qWo" firstAttribute="leading" secondItem="TrJ-1c-blu" secondAttribute="leading" constant="44" id="ldM-ZP-AIg"/>
+                            <constraint firstItem="Gr3-6H-c0f" firstAttribute="top" secondItem="EFs-0F-Msx" secondAttribute="bottom" constant="12" id="2oD-IJ-iCV"/>
+                            <constraint firstItem="2e0-o6-qWo" firstAttribute="top" secondItem="Gxx-bQ-jVN" secondAttribute="bottom" constant="13" id="Cpd-03-fFB"/>
+                            <constraint firstItem="Gxx-bQ-jVN" firstAttribute="leading" secondItem="TrJ-1c-blu" secondAttribute="leading" constant="27" id="DPb-Oj-7JD"/>
+                            <constraint firstAttribute="trailing" secondItem="Gxx-bQ-jVN" secondAttribute="trailing" constant="27" id="EGG-w0-wHp"/>
+                            <constraint firstAttribute="trailing" secondItem="2e0-o6-qWo" secondAttribute="trailing" constant="44" id="OAr-9I-WIT"/>
+                            <constraint firstItem="Gxx-bQ-jVN" firstAttribute="top" secondItem="Gr3-6H-c0f" secondAttribute="bottom" constant="3" id="PVl-E2-Spv"/>
+                            <constraint firstAttribute="trailing" secondItem="Gr3-6H-c0f" secondAttribute="trailing" constant="81" id="UBP-1h-qyQ"/>
+                            <constraint firstItem="Gr3-6H-c0f" firstAttribute="leading" secondItem="TrJ-1c-blu" secondAttribute="leading" constant="82" id="ioS-OL-9L5"/>
+                            <constraint firstAttribute="width" secondItem="Gxx-bQ-jVN" secondAttribute="height" multiplier="320:107" id="tJW-0K-N2A"/>
+                            <constraint firstItem="2e0-o6-qWo" firstAttribute="leading" secondItem="TrJ-1c-blu" secondAttribute="leading" constant="44" id="wEk-zT-M8j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Compose" id="XW7-Kf-khR"/>
                     <connections>
                         <outlet property="sendButton" destination="2e0-o6-qWo" id="eyb-J1-wkQ"/>
+                        <outlet property="sendStatusLabel" destination="Gr3-6H-c0f" id="u5t-fm-yZz"/>
+                        <outlet property="spinner" destination="2cL-Ln-VxH" id="V05-m1-xJa"/>
                         <outlet property="textView" destination="Gxx-bQ-jVN" id="hbL-wl-DNl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKE-AY-X3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="UZJ-0K-fsl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1463" y="-234"/>
         </scene>

@@ -10,6 +10,4 @@
 
 @interface HUBContactListTableViewController : UITableViewController
 
-- (IBAction)unwindToContactList:(UIStoryboardSegue *)segue;
-
 @end

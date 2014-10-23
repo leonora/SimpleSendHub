@@ -12,6 +12,8 @@
 @interface HUBComposeMessageViewController : UIViewController {
     IBOutlet UITextView *textView;
     IBOutlet UIButton *sendButton;
+    __weak IBOutlet UIActivityIndicatorView *spinner;
+    __weak IBOutlet UILabel *sendStatusLabel;
 }
 
 - (IBAction)pressedSend:(id)sender;

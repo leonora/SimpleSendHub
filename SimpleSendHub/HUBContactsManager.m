@@ -42,4 +42,9 @@
     [self.delegate fetchingContactsFailedWithError:error];
 }
 
+- (void)receivedSendMessageStatus:(BOOL)isSuccessful
+{
+    [self.delegate wasSendMessageSuccessful:isSuccessful];
+}
+
 @end

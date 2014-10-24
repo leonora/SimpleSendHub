@@ -31,20 +31,28 @@
     NSArray *contacts = [HUBContactListBuilder contactListFromJSON:objectNotation error:&error];
     
     if (error != nil) {
-        [self.delegate fetchingContactsFailedWithError:error];
+        if ([self.delegate respondsToSelector:@selector(fetchingContactsFailedWithError:)]) {
+            [self.delegate fetchingContactsFailedWithError:error];
+        }
     } else {
-        [self.delegate didReceiveContacts:contacts];
+        if ([self.delegate respondsToSelector:@selector(didReceiveContacts:)]) {
+            [self.delegate didReceiveContacts:contacts];
+        }
     }
 }
 
 - (void)fetchingContactsFailedWithError:(NSError *)error
 {
-    [self.delegate fetchingContactsFailedWithError:error];
+    if ([self.delegate respondsToSelector:@selector(fetchingContactsFailedWithError:)]) {
+        [self.delegate fetchingContactsFailedWithError:error];
+    }
 }
 
 - (void)receivedSendMessageStatus:(BOOL)isSuccessful
 {
-    [self.delegate wasSendMessageSuccessful:isSuccessful];
+    if ([self.delegate respondsToSelector:@selector(wasSendMessageSuccessful:)]) {
+        [self.delegate wasSendMessageSuccessful:isSuccessful];
+    }
 }
 
 @end
